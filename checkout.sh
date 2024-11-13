@@ -13,7 +13,7 @@ fi
 
 # Artifactory server and identity token
 ARTIFACTORY_SERVER=https://artifactory.geo.conti.de
-ARTIFACTORY_IDENTITY_TOKEN=cmVmdGtuOjAxOjE3NjMwMDEwMzk6RWNnejhIUTl2VGpqSWVRMG5hMVJxMEw2RFB4
+ARTIFACTORY_IDENTITY_TOKEN="your_identity_token_here"
 
 # GHS compiler download link
 GHS_LINUX_PATH="artifactory/rm_swp_vc_hpc_art_generic_snap_v/supplies/ghs2020.1.4-arm-linux.tar.xz"
