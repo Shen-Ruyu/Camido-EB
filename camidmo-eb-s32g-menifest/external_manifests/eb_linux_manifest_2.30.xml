@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="origin" fetch="ssh://git@github-vni.geo.conti.de/bs-g-nd-ptf-hpc-gen2"/>
+  <remote name="mirrors" fetch="ssh://git@github-vni.geo.conti.de/bs-g-nd-ptf-hpc-gen2-mirrors"/>
+
+  <!-- remote name must be origin for git lfs objects -->
+  <!--<remote name="eb" fetch="ssh://git@gitext.elektrobitautomotive.com"/>-->
+
+  <project name="gitext.elektrobitautomotive.com.EB-Linux-Release.meta-corbos-linux"
+    remote="mirrors"
+    path="performance/eb_linux/workspace/meta-corbos-linux"
+    revision="refs/tags/2.30.0"
+    groups="face_ez1"/>
+
+  <project name="gitext.elektrobitautomotive.com.EB-Linux-Release.poky"
+    remote="mirrors"
+    path="performance/eb_linux/workspace/poky"
+    revision="bc71ec0f1d97c983cb0a089b15e283c56de30844"
+    upstream="gatesgarth"
+    groups="face_ez1"/>
+
+  <project name="gitext.elektrobitautomotive.com.EB-Linux-Release.meta-openembedded"
+    remote="mirrors"
+    path="performance/eb_linux/workspace/upstream/meta-openembedded"
+    revision="f3f7a5f1a4713f145107bb043e0d14cb3a51c62f"
+    upstream="gatesgarth"
+    groups="face_ez1"/>
+
+  <project name="gitext.elektrobitautomotive.com.EB-Linux-Release.meta-freescale"
+    remote="mirrors"
+    path="performance/eb_linux/workspace/upstream-bsp/meta-freescale"
+    revision="d5a82541a97dd3a6b9116a1cd72f9965510a3de9"
+    upstream="gatesgarth"
+    groups="face_ez1"/>
+
+  <project name="gitext.elektrobitautomotive.com.EB-Linux-Release.yocto-build"
+    remote="mirrors"
+    path="performance/eb_linux/workspace/yocto-build"
+    revision="refs/tags/2.30.0.1"
+    groups="face_ez1"/>
+
+  <project name="gitext.elektrobitautomotive.com.EB-Linux-Release.meta-corbos-linux-virt"
+    remote="mirrors"
+    path="performance/eb_linux/workspace/meta-corbos-linux-virt"
+    revision="refs/tags/2.30.0.1"
+    groups="face_ez1"/>
+
+    <!-- HPC_GEN2 adaptions -->
+  <project remote="origin" name="meta-alb"
+    path="performance/eb_linux/workspace/upstream-bsp/meta-alb"
+    revision="refs/tags/bsp34.0-3.2"
+    upstream="hpc/master"
+    groups="face_ez1"/>
+
+</manifest>

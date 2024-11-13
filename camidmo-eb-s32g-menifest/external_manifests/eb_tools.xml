@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+ <remote name="mirrors" fetch="ssh://git@github-vni.geo.conti.de/bs-g-nd-ptf-hpc-gen2-mirrors"/>
+
+  <project name="gitext.elektrobitautomotive.com.HPC-Gen2.eb_network_configuration"
+    remote="mirrors"
+    path="hpc_base_plus/ebxelor/pkg/eb_network_configuration/python_package"
+    revision="refs/tags/v0.0.3"
+    groups="face_ez1"/>
+
+  <project name="gitext.elektrobitautomotive.com.HPC-Gen2.rel.valeria_tool"
+    remote="mirrors"
+    path="hpc_base_plus/ebxelor/tools/valeria"
+    revision="refs/tags/1.0.0"
+    groups="face_ez1"/>
+
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="ssh://git@github-vni.geo.conti.de/supplier-nxp" name="supplier-nxp"/>
+  <remote fetch="ssh://git@github-vni.geo.conti.de/iip-oss" name="iip-oss"/>
+
+  <project name="meta-nxp-bsp" remote="supplier-nxp" path="performance/nxp_yocto_linux/sources/meta-nxp-bsp" revision="22a1dec40e5967056eb552389f64f085c4317948" upstream="yocto-gatesgarth" groups="face_ez1"/>
+  <project name="meta-flash-base" remote="vc_hpc" path="performance/nxp_yocto_linux/sources/meta-flash-base" revision="a48657d10e69fa007bc070b676fbf638cbed1936" groups="face_ez1"/>  
+
+</manifest>

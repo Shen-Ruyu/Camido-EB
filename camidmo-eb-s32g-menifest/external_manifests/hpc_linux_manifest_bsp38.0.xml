@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<manifest>
+  <remote fetch="ssh://git@github-vni.geo.conti.de/supplier-nxp" name="supplier-nxp"/>
+  <remote fetch="ssh://git@github-vni.geo.conti.de/iip-oss" name="iip-oss"/>
+
+  <project name="meta-alb" path="performance/nxp_yocto_linux/sources/meta-alb" revision="814fa233f9d5e4502090b38bd4a64d15650328e1" remote="supplier-nxp" upstream="release/bsp38.0-4.0">
+    <copyfile dest="performance/nxp_yocto_linux/nxp-setup-alb.sh" src="nxp-setup-alb.sh"/>
+  </project>
+
+  <!-- projects below synchronized with default.xml in LFAC -->
+  <project name="meta-freescale" path="performance/nxp_yocto_linux/sources/meta-freescale" remote="iip-oss" revision="6f04cf1fce13c9852d4ec86b66a3858c42b7c7c9"/>
+  <project name="meta-python2" path="performance/nxp_yocto_linux/sources/meta-openembedded/meta-python2" remote="iip-oss" revision="f02882e2aa9279ca7becca8d0cedbffe88b5a253"/>
+  <project name="meta-security" path="performance/nxp_yocto_linux/sources/meta-security" remote="iip-oss" revision="d398cc6ea6716afd3a3a6e88ad8fbdc89510ef23"/>
+  <project name="meta-virtualization" path="performance/nxp_yocto_linux/sources/meta-virtualization" remote="iip-oss" revision="b3b3dbc67504e8cd498d6db202ddcf5a9dd26a9d"/>
+  <project name="meta-openembedded" path="performance/nxp_yocto_linux/sources/meta-openembedded" remote="iip-oss" revision="bdad2a789e30703a825b876279665720d06d55dc"/>
+  <project name="poky" path="performance/nxp_yocto_linux/sources/poky" remote="iip-oss" revision="f53ab3a2ff206a130cdc843839dd0ea5ec4ad02f"/>
+
+  <!-- projects below are not updated for gatesgarth -->
+  <project name="meta-qoriq" path="performance/nxp_yocto_linux/sources/meta-qoriq" remote="supplier-nxp" revision="afaef5e29b0d5cb8a0f59c62bf9cbd44140b041e"/>
+
+  </manifest>

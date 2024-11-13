@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="sw-foundation" fetch="ssh://git@github-vni.geo.conti.de/sw-foundation-assets/"/>
+  <remote name="cds" fetch="ssh://git@github-vni.geo.conti.de/cds/"/>
+  <remote name="vc_hpc" fetch="ssh://git@github-vni.geo.conti.de/rm-swp-vc-hpc/"/>
+
+  <project name="hpc.eb_tresos_s32g" remote="vc_hpc" path="camido-eb-s32g/eb_tresos_studio" revision="ACG-2.9.x" />
+  <project name="sw-ac-nxp-realtime" remote="sw-foundation" path="camido-eb-s32g/sw-ac-nxp-realtime" revision="feature/IIP-223350" />
+  <project name="sw.pkg.em_ctrace.git" remote="cds" path="camido-eb-s32g/sw-ac-nxp-realtime/metha/car_sw/source/pkg/em_ctrace/target" revision="master" />
+</manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+ <remote name="mirrors" fetch="ssh://git@github-vni.geo.conti.de/bs-g-nd-ptf-hpc-gen2-mirrors"/>
+
+  <project name="gitext.elektrobitautomotive.com.HPC-Gen2.rel.ara-corbos-AdaptiveCore-deliveries"
+    remote="mirrors"
+    path="hpc_base_plus/ebxelor/pkg/eb_adg/workspace/ara-corbos-AdaptiveCore-deliveries"
+    revision="refs/tags/ADG-2.9.5"
+    groups="face_ez1"/>
+
+</manifest>

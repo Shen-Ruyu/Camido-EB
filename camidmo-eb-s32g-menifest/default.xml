@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="xmi_ivs" fetch="ssh://git@github-vni.geo.conti.de/xmi-ms11-24-ivs/"/>
+  <remote name="iip" fetch="ssh://git@github-vni.geo.conti.de/iip/"/>
+  <remote name="vc_hpc" fetch="ssh://git@github-vni.geo.conti.de/rm-swp-vc-hpc/"/>
+
+  <include name="external_manifests/eb_linux_manifest_2.33.xml" groups="mm-ignore"/>
+  <include name="external_manifests/hpc_linux_manifest_bsp34.0.xml" groups="mm-ignore"/>
+
+  <!--Performance Partition-->>
+  <include name="import/licoos-nxp-s32g.xml" groups="mm-ignore"/>
+
+  <!-- Performance Partition - Adaptvie -->
+  <project name="hpc.performance.eb_adaptive.integration" remote="vc_hpc" path="performance/eb_adaptive/integration" revision="17f59caeebdbbaab237d8b8f7e362db93c85d77c" groups="face_ez1"/>
+  <project name="gitext.elektrobitautomotive.com.HPC-Gen2.rel.ara-corbos-AdaptiveCore-deliveries" remote="mirrors" path="performance/eb_adaptive/ara-corbos-AdaptiveCore-deliveries" revision="refs/tags/ADG-2.9.5" groups="face_ez1"/>
+
+  <!-- Real time partition -->
+  <include name="import/camido-eb-s32g.xml" groups="mm-ignore"/>
+  <project name="vc_hpc" remote="vc_hpc" path="vc_hpc" revision="main">
+    <linkfile src="common/ctrace/cfg" dest="camido-eb-s32g/sw-ac-nxp-realtime/metha/car_sw/source/pkg/em_ctrace/cfg"/>
+    <linkfile src="common/ctrace/patches" dest="camido-eb-s32g/sw-ac-nxp-realtime/metha/car_sw/source/pkg/em_ctrace/patches"/>
+    <linkfile src="common/ctrace/standalone" dest="camido-eb-s32g/sw-ac-nxp-realtime/metha/car_sw/source/pkg/em_ctrace/standalone"/>
+  </project>
+
+  <!-- HPC Tools -->
+  <project name="hpc.tools" remote="vc_hpc" path="tools" revision="2acc82eb6c66163a95563e0fc637b5d2cd188624" groups="face_ez1"/>
+  <project name="hpc.tooling_flash" remote="vc_hpc" path="tools/tooling_flash" revision="cc8b779fee4c4df0cec6be26edba2cfba33b3437" groups="face_ez1"/>
+  <project name="update-script" remote="vc_hpc" path="tools/tooling_flash/target/update-script" revision="a6f4957a1e64e6c042b975c10113834e5ebf9938" upstream="s32g3" groups="face_ez1"/>
+  <project name="hpc.tools.layout_generator" remote="vc_hpc" path="tools/layout_generator" revision="fc62ff2af1ee46ce4cff274ad738558b5c0f0122" groups="face_ez1"/>
+  <project name="hpc.tools.u-boot_env_generator" remote="vc_hpc" path="tools/u-boot_env_generator" revision="81aaecfce1f0bc24b9d8ffff71b6689e6c7778d0" groups="face_ez1"/>
+
+  <!-- Third Party -->
+  <project name="pfe-fw" remote="supplier-nxp" path="common/nxp-firmware/s32g3/pfe/v1.9.0_rtm" revision="ee17b9a539ddfa7450e76e163b04dec184c39a87" upstream="v1.9.0_rtm"/>
+  <project name="hse-fw" remote="supplier-nxp" path="common/nxp-firmware/s32g3/hse/HSE_FW_S32G3_0_2_22_0" revision="8676ac4ca5d836335947868469f253e1f332f5c1" upstream="S32G3XX-0.2.22.0"/>  
+  <project name="hse-fw" remote="supplier-nxp" path="common/nxp-firmware/s32g2/hse/HSE_FW_S32G2_0_1_0_5" revision="4d2b1856e86de361ec672e1a151713b9a067ac79" upstream="S32G2XX-0.1.0.5"/>  
+  <project name="arm-trusted-firmware" remote="supplier-nxp" path="performance/arm-trusted-firmware" revision="refs/tags/bsp34.0-2.5"/>
+  <project name="u-boot" remote="supplier-nxp" path="performance/u-boot" revision="release/bsp34.0-2020.04"/>
+</manifest>
